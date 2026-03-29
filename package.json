@@ -1,0 +1,62 @@
+{
+  "name": "markie-mcp",
+  "version": "0.1.1",
+  "description": "MCP server for Markie — search, browse, and retrieve images, videos, and design assets from your personal library via any AI assistant",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "markie-mcp": "bin/markie-mcp.mjs"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "markie",
+    "assets",
+    "asset-management",
+    "design",
+    "image",
+    "video",
+    "svg",
+    "pdf",
+    "ai",
+    "claude",
+    "llm"
+  ],
+  "author": "David Sjunnesson <contact@vitgranen.com>",
+  "homepage": "https://getmarkie.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjunnesson/markie-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sjunnesson/markie-mcp/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.0",
+    "fuse.js": "^7.1.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

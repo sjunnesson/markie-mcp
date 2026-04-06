@@ -1,6 +1,6 @@
 {
-  "name": "markie-mcp",
-  "version": "0.1.1",
+  "name": "@vitgranen/markie-mcp",
+  "version": "0.2.0",
   "description": "MCP server for Markie — search, browse, and retrieve images, videos, and design assets from your personal library via any AI assistant",
   "type": "module",
   "main": "dist/index.js",

@@ -42,14 +42,15 @@ export function searchAssets(catalog: Catalog, params: SearchParams): Asset[] {
       return false;
     }
 
-    // Filter by colors (at least one color in params.colors must match, case-insensitive)
+    // Filter by colors (at least one color in params.colors must match, normalized)
     if (params.colors !== undefined && params.colors.length > 0) {
       if (!asset.colorPalette || asset.colorPalette.length === 0) {
         return false;
       }
-      const assetColorsLower = asset.colorPalette.map((c) => c.toLowerCase());
+      const normalizeHex = (c: string) => c.replace(/^#/, '').toLowerCase();
+      const assetColors = asset.colorPalette.map(normalizeHex);
       const anyColorMatches = params.colors.some((color) =>
-        assetColorsLower.includes(color.toLowerCase())
+        assetColors.includes(normalizeHex(color))
       );
       if (!anyColorMatches) {
         return false;

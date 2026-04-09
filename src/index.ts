@@ -15,9 +15,13 @@ import { toolGetStats } from './tools/get-stats.js';
 const client = new MarkieClient();
 const cache = new CatalogCache(client);
 
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const pkg = require('../package.json') as { version: string };
+
 const server = new McpServer({
   name: 'markie',
-  version: '0.1.0',
+  version: pkg.version,
 });
 
 // Register tools

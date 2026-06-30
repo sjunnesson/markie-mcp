@@ -1,7 +1,7 @@
 # markie-mcp
 
-[![npm version](https://img.shields.io/npm/v/markie-mcp)](https://www.npmjs.com/package/markie-mcp)
-[![license](https://img.shields.io/npm/l/markie-mcp)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@vitgranen/markie-mcp)](https://www.npmjs.com/package/@vitgranen/markie-mcp)
+[![license](https://img.shields.io/npm/l/@vitgranen/markie-mcp)](./LICENSE)
 
 MCP (Model Context Protocol) server for [Markie](https://getmarkie.app) — a personal asset library for designers and developers. Markie collects images, videos, PDFs, SVGs, and website bookmarks via a Chrome extension, then enriches them with AI-generated descriptions, tags, and color palettes. This MCP server lets AI assistants search, browse, and retrieve assets from your Markie library.
 
@@ -17,7 +17,7 @@ No API key required — the server authenticates automatically with the local Ma
 ### Claude Code
 
 ```bash
-claude mcp add markie -- npx -y markie-mcp
+claude mcp add markie -- npx -y @vitgranen/markie-mcp
 ```
 
 ### Claude Desktop
@@ -29,7 +29,7 @@ Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_
   "mcpServers": {
     "markie": {
       "command": "npx",
-      "args": ["-y", "markie-mcp"]
+      "args": ["-y", "@vitgranen/markie-mcp"]
     }
   }
 }
@@ -37,7 +37,7 @@ Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_
 
 ### Cursor / other MCP clients
 
-Use `npx -y markie-mcp` as the command. The server communicates over stdio.
+Use `npx -y @vitgranen/markie-mcp` as the command. The server communicates over stdio.
 
 ## Available Tools
 
